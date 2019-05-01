@@ -502,7 +502,6 @@ GameObject:
   - component: {fileID: 3141462680472356014}
   - component: {fileID: 863483242478438403}
   - component: {fileID: 4724406359382113276}
-  - component: {fileID: 6257133139366603445}
   m_Layer: 0
   m_Name: Skeleton@Skin
   m_TagString: Untagged
@@ -603,21 +602,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22221e705be95e549b863f750e9c7324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  texture: {fileID: 2800000, guid: 1a93b732c806cf24d8aa2c7bff8c18d7, type: 3}
   damage: 0.5
   IsAttacking: 0
---- !u!114 &6257133139366603445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 667842964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 634dfffb0cc703e4984c8efbdc97186c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyHit: {fileID: 0}
 --- !u!1 &736593393
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,6 +950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22221e705be95e549b863f750e9c7324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  texture: {fileID: 0}
   damage: 10
   IsAttacking: 0
 --- !u!1 &1115275132

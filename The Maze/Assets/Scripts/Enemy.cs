@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        if(Vector3.Distance(player.position , this.transform.position) < 7)
+        if(Vector3.Distance(player.position , this.transform.position) < 9)
         {
             Vector3 direction = player.position - this.transform.position;
             direction.y = 0;
@@ -28,6 +28,7 @@ public class Enemy : MonoBehaviour
                 anim.SetBool("IsWalking", true);
                 anim.SetBool("IsAttacking", false);
                 gameObject.GetComponent<damaging>().IsAttacking = false;
+              //  SoundManager.instance.PlayOneShot(SoundManager.instance.EnemyHit);
             }
 
             else

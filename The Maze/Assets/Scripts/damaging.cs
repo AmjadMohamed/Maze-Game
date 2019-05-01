@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class damaging : MonoBehaviour
-{// remove that script 
+{
+    public Texture texture;
+
     public float damage = 10;
     public bool IsAttacking;
 
@@ -22,25 +25,34 @@ public class damaging : MonoBehaviour
         
             if (IsAttacking)
             {
-                playerhealth.takedamage(damage);
+              playerhealth.takedamage(damage);
+              OnGUI();
             }
 
 
         
     }
 
-  /*  private void OnCollisionStay(Collision collision)
+    /*  private void OnCollisionStay(Collision collision)
+      {
+
+
+          if (collision.transform.tag == "Player")
+          {
+              if (IsAttacking)
+              {
+                  playerhealth.takedamage(damage);
+              }
+
+
+          }
+      }*/
+
+    void OnGUI()
     {
-
-        
-        if (collision.transform.tag == "Player")
+        if (IsAttacking)
         {
-            if (IsAttacking)
-            {
-                playerhealth.takedamage(damage);
-            }
-
-
+            GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), texture);
         }
-    }*/
+    }
 }

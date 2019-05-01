@@ -26,11 +26,11 @@ public class GameManager : MonoBehaviour
         if(isplayerdead)
         {
             //  losescreen.SetActive(true);
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(9);
         }
         else if (haswon)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(10);
         }
     }
 
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(8);
     }
     
     public static void playerwon()
