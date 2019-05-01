@@ -10,6 +10,7 @@ public class HealthBar : MonoBehaviour
 
     public float hitpoint = 150;
     public float maxhitpoint = 150;
+   // public GameObject player;
 
     void Start()
     {
@@ -35,8 +36,20 @@ public class HealthBar : MonoBehaviour
         if(hitpoint < 0)
         {
             hitpoint = 0;
+           // Destroy(this.gameObject);
+            GameManager.playerdead();
+
         }
 
         updatehealthbar();
+    }
+
+    private void OnTriggerEnter(Collider col)
+    {
+        if(col.transform.tag =="Finish")
+        {
+            Debug.Log("entered");
+            GameManager.playerwon();
+        }
     }
 }

@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        if(Vector3.Distance(player.position , this.transform.position) < 5)
+        if(Vector3.Distance(player.position , this.transform.position) < 7)
         {
             Vector3 direction = player.position - this.transform.position;
             direction.y = 0;
