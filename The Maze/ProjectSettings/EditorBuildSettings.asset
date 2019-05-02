@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/won scene.unity
     guid: ea69dec154beccd4baba82ed5b6206b0
+  - enabled: 1
+    path: Assets/Scenes/thanks for playing.unity
+    guid: 10b91d89335a0bb4f9e459820be1356b
   m_configObjects: {}

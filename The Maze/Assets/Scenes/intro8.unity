@@ -210,6 +210,7 @@ MonoBehaviour:
   panel1: {fileID: 579912276}
   level: 8
   fadeout: 4
+  waitforseconds: 1
 --- !u!1 &417319611
 GameObject:
   m_ObjectHideFlags: 0
