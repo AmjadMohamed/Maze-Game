@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.017376518, g: 0.017521366, b: 0.022268277, a: 1}
+  m_IndirectSpecularColor: {r: 0.017826876, g: 0.017899195, b: 0.023520034, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -514,6 +514,10 @@ PrefabInstance:
     - target: {fileID: 1234087673990470, guid: f54d86303dfb37f4bbaa9a13b72b2aba, type: 3}
       propertyPath: m_Name
       value: Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 1234087673990470, guid: f54d86303dfb37f4bbaa9a13b72b2aba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224555817415181320, guid: f54d86303dfb37f4bbaa9a13b72b2aba,
         type: 3}
@@ -5956,7 +5960,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554880489}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4527a1e07b77b246a3500c099c05430, type: 3}
   m_Name: 
@@ -5990,6 +5994,10 @@ PrefabInstance:
     - target: {fileID: 1601589605745202, guid: 4c828a607ec5aa94bba6fd795d4e51dd, type: 3}
       propertyPath: m_Name
       value: Touchfield
+      objectReference: {fileID: 0}
+    - target: {fileID: 1601589605745202, guid: 4c828a607ec5aa94bba6fd795d4e51dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224416803245515862, guid: 4c828a607ec5aa94bba6fd795d4e51dd,
         type: 3}
@@ -16217,6 +16225,10 @@ PrefabInstance:
     - target: {fileID: 1066576224691534, guid: ccf5d7d517c71bf46ad9135b30f777fa, type: 3}
       propertyPath: m_Name
       value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066576224691534, guid: ccf5d7d517c71bf46ad9135b30f777fa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224187004634754148, guid: ccf5d7d517c71bf46ad9135b30f777fa,
         type: 3}

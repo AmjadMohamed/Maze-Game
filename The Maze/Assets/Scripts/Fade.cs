@@ -9,21 +9,22 @@ public class Fade : MonoBehaviour
     public Image panel1;
     public int level;
     public float fadeout = 1.0f;
-    public float waitforseconds = 2.5f;
+    public float fadein = 2f;
+    public float waitforseconds = 3f;
     IEnumerator Start()
     {
         panel1.canvasRenderer.SetAlpha(0.0f);
         FadeIn();
-        yield return new WaitForSeconds(3.0f);
-        FadeOut();
         yield return new WaitForSeconds(waitforseconds);
+        FadeOut();
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene(level);
 
     }
 
     void FadeIn()
     {
-        panel1.CrossFadeAlpha(1.0f, 1.5f, false);
+        panel1.CrossFadeAlpha(1.0f, fadein, false);
     }
 
     void FadeOut()

@@ -208,9 +208,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel1: {fileID: 579912276}
-  level: 8
-  fadeout: 4
-  waitforseconds: 1
+  level: 9
+  fadeout: 2
+  fadein: 1.5
+  waitforseconds: 10
 --- !u!1 &417319611
 GameObject:
   m_ObjectHideFlags: 0
