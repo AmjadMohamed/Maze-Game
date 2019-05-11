@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public Transform player;
     public Animator anim;
+   // public float movementspeed = 0.1f;
 
     public float damage = 10;
 
@@ -24,7 +25,7 @@ public class Enemy : MonoBehaviour
             anim.SetBool("IsIdle", false); 
             if (direction.magnitude > 2)
             {
-                this.transform.Translate(0, 0, 0.05f);
+                this.transform.Translate(0, 0, 0.025f);
                 anim.SetBool("IsWalking", true);
                 anim.SetBool("IsAttacking", false);
                 gameObject.GetComponent<damaging>().IsAttacking = false;

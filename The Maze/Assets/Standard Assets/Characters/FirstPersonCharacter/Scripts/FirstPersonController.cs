@@ -11,6 +11,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
     public class FirstPersonController : MonoBehaviour
     {
         [SerializeField] private bool m_IsWalking;
+
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
@@ -42,6 +43,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        //mobile Input
+       [HideInInspector] public Vector2 RunAxis;
+       [HideInInspector] public bool JumpAxis;
+
         // Use this for initialization
         private void Start()
         {
@@ -63,10 +68,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             RotateView();
             // the jump state needs to read here to make sure it is not missed
+
             if (!m_Jump)
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
+
+            //mobile input
+
+            /*if (JumpAxis && !m_Jump)
+            {
+                m_Jumping = true; 
+            }*/
 
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
             {
@@ -204,8 +217,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void GetInput(out float speed)
         {
             // Read input
-            float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
-            float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+             float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
+             float vertical = CrossPlatformInputManager.GetAxis("Vertical"); 
+
+            // mobile input
+
+           // float horizontal = RunAxis.x;
+          //  float vertical = RunAxis.y;
+
 
             bool waswalking = m_IsWalking;
 
